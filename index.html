@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gimhana & Harshi | Wedding Invitation</title>
+    <meta name="description" content="You are cordially invited to celebrate the wedding of Gimhana & Harshi on May 6th, 2026. Join us for a beautiful celebration of love.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Montserrat:wght@300;400;500;600&family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Splash / Intro Screen -->
+    <div id="splash-screen">
+        <div class="splash-bg">
+            <img src="photos/photo7.jpeg" alt="Gimhana & Harshi" class="splash-photo">
+        </div>
+        <div class="splash-overlay"></div>
+        <div class="splash-content">
+            <div class="splash-ornament-top">
+                <svg viewBox="0 0 200 20" fill="none" stroke="currentColor" stroke-width="0.8">
+                    <path d="M0,10 Q25,0 50,10 Q75,20 100,10 Q125,0 150,10 Q175,20 200,10"/>
+                </svg>
+            </div>
+            <p class="splash-pretext">You are invited to the wedding of</p>
+            <h1 class="splash-names">
+                <span class="splash-name">Gimhana</span>
+                <span class="splash-amp">&</span>
+                <span class="splash-name">Harshi</span>
+            </h1>
+            <p class="splash-date">May 6, 2026</p>
+            <div class="splash-ornament-bottom">
+                <svg viewBox="0 0 200 20" fill="none" stroke="currentColor" stroke-width="0.8">
+                    <path d="M0,10 Q25,20 50,10 Q75,0 100,10 Q125,20 150,10 Q175,0 200,10"/>
+                </svg>
+            </div>
+            <button id="openInvitation" class="splash-btn">
+                <span class="splash-btn-text">Open Invitation</span>
+                <span class="splash-btn-icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                        <polyline points="22 4 12 14.01 9 11.01"/>
+                    </svg>
+                </span>
+            </button>
+        </div>
+        <!-- Split doors for open animation -->
+        <div class="splash-door splash-door-left"></div>
+        <div class="splash-door splash-door-right"></div>
+    </div>
+
+    <!-- Floating Particles -->
+    <div id="particles-container"></div>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-content">
+            <a href="#hero" class="nav-logo">G <span class="nav-heart">&hearts;</span> H</a>
+            <div class="nav-toggle" id="navToggle">
+                <span></span><span></span><span></span>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#countdown">Countdown</a></li>
+                <li><a href="#story">Our Story</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#event">Event</a></li>
+                <li><a href="#location">Location</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-bg-image"></div>
+        <div class="floating-hearts">
+            <span class="heart-float">♥</span>
+            <span class="heart-float">♥</span>
+            <span class="heart-float">♥</span>
+            <span class="heart-float">♥</span>
+            <span class="heart-float">♥</span>
+            <span class="heart-float">♥</span>
+            <span class="heart-float">♥</span>
+            <span class="heart-float">♥</span>
+        </div>
+        <div class="hero-content">
+            <p class="hero-pretext reveal-up">We are getting married</p>
+            <div class="hero-names reveal-up delay-1">
+                <span class="name-groom">Gimhana</span>
+                <span class="name-and">&</span>
+                <span class="name-bride">Harshi</span>
+            </div>
+            <div class="hero-date reveal-up delay-2">
+                <div class="date-line"></div>
+                <p>May 6, 2026</p>
+                <div class="date-line"></div>
+            </div>
+            <p class="hero-invite reveal-up delay-3">Together with their families, request the honour of your presence at the celebration of their marriage</p>
+            <a href="#countdown" class="hero-scroll-btn reveal-up delay-4">
+                <span>Scroll Down</span>
+                <div class="scroll-arrow">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M7 13l5 5 5-5M7 6l5 5 5-5"/>
+                    </svg>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- Countdown Section -->
+    <section id="countdown">
+        <div class="section-ornament">
+            <svg viewBox="0 0 200 30" class="ornament-svg">
+                <path d="M0,15 Q50,0 100,15 Q150,30 200,15" fill="none" stroke="currentColor" stroke-width="1"/>
+            </svg>
+        </div>
+        <div class="container">
+            <h2 class="section-title reveal-up">
+                <span class="title-script">Counting Down</span>
+                <span class="title-main">To Our Special Day</span>
+            </h2>
+            <div class="countdown-wrapper reveal-up delay-1">
+                <div class="countdown-card" id="countdown-days">
+                    <div class="countdown-ring">
+                        <svg viewBox="0 0 120 120">
+                            <circle cx="60" cy="60" r="54" class="ring-bg"/>
+                            <circle cx="60" cy="60" r="54" class="ring-progress" id="ring-days"/>
+                        </svg>
+                        <div class="countdown-inner">
+                            <span class="countdown-number" id="days">00</span>
+                            <span class="countdown-label">Days</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="countdown-separator">:</div>
+                <div class="countdown-card" id="countdown-hours">
+                    <div class="countdown-ring">
+                        <svg viewBox="0 0 120 120">
+                            <circle cx="60" cy="60" r="54" class="ring-bg"/>
+                            <circle cx="60" cy="60" r="54" class="ring-progress" id="ring-hours"/>
+                        </svg>
+                        <div class="countdown-inner">
+                            <span class="countdown-number" id="hours">00</span>
+                            <span class="countdown-label">Hours</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="countdown-separator">:</div>
+                <div class="countdown-card" id="countdown-minutes">
+                    <div class="countdown-ring">
+                        <svg viewBox="0 0 120 120">
+                            <circle cx="60" cy="60" r="54" class="ring-bg"/>
+                            <circle cx="60" cy="60" r="54" class="ring-progress" id="ring-minutes"/>
+                        </svg>
+                        <div class="countdown-inner">
+                            <span class="countdown-number" id="minutes">00</span>
+                            <span class="countdown-label">Minutes</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="countdown-separator">:</div>
+                <div class="countdown-card" id="countdown-seconds">
+                    <div class="countdown-ring">
+                        <svg viewBox="0 0 120 120">
+                            <circle cx="60" cy="60" r="54" class="ring-bg"/>
+                            <circle cx="60" cy="60" r="54" class="ring-progress" id="ring-seconds"/>
+                        </svg>
+                        <div class="countdown-inner">
+                            <span class="countdown-number" id="seconds">00</span>
+                            <span class="countdown-label">Seconds</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Story / Couple Section -->
+    <section id="story">
+        <div class="container">
+            <h2 class="section-title reveal-up">
+                <span class="title-script">Our Love</span>
+                <span class="title-main">Story</span>
+            </h2>
+            <div class="couple-showcase reveal-up delay-1">
+                <div class="couple-card groom-card">
+                    <div class="couple-photo-frame">
+                        <img src="photos/photo6.jpeg" alt="Gimhana" loading="lazy">
+                    </div>
+                    <h3 class="couple-name">Gimhana</h3>
+                    <p class="couple-role">The Groom</p>
+                </div>
+                <div class="couple-heart-center">
+                    <div class="heart-pulse">
+                        <svg viewBox="0 0 50 50" class="heart-icon">
+                            <path d="M25,45 L4,25 C-2,18 -2,8 4,3 C10,-2 18,0 25,10 C32,0 40,-2 46,3 C52,8 52,18 46,25 Z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="couple-card bride-card">
+                    <div class="couple-photo-frame">
+                        <img src="photos/photo8.jpeg" alt="Harshi" loading="lazy">
+                    </div>
+                    <h3 class="couple-name">Harshi</h3>
+                    <p class="couple-role">The Bride</p>
+                </div>
+            </div>
+
+            <div class="love-quote reveal-up delay-2">
+                <blockquote>
+                    "Two souls with but a single thought, two hearts that beat as one."
+                </blockquote>
+            </div>
+
+            <!-- Timeline -->
+            <div class="timeline">
+                <div class="timeline-item reveal-left">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                        </div>
+                        <h4>First Met</h4>
+                        <p>Where our journey began with a simple hello that changed our lives forever.</p>
+                    </div>
+                </div>
+                <div class="timeline-item reveal-right">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+                        </div>
+                        <h4>Started Dating</h4>
+                        <p>From friendship to something more beautiful. Every moment together became a cherished memory.</p>
+                    </div>
+                </div>
+                <div class="timeline-item reveal-left">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                        </div>
+                        <h4>The Proposal</h4>
+                        <p>A magical moment when the question was popped and she said YES! The beginning of forever.</p>
+                    </div>
+                </div>
+                <div class="timeline-item reveal-right">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+                        </div>
+                        <h4>Wedding Day — May 6, 2026</h4>
+                        <p>The day we say "I do" and begin our forever journey together. You are invited to be part of this celebration!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery">
+        <div class="container">
+            <h2 class="section-title reveal-up">
+                <span class="title-script">Captured</span>
+                <span class="title-main">Moments</span>
+            </h2>
+            <p class="section-subtitle reveal-up delay-1">A glimpse into our journey together</p>
+            <div class="gallery-grid reveal-up delay-2">
+                <div class="gallery-item gallery-wide" data-index="0">
+                    <img src="photos/photo1.jpeg" alt="Gimhana & Harshi together" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span class="gallery-zoom">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                        </span>
+                    </div>
+                </div>
+                <div class="gallery-item" data-index="1">
+                    <img src="photos/photo2.jpeg" alt="Gimhana & Harshi" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span class="gallery-zoom">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                        </span>
+                    </div>
+                </div>
+                <div class="gallery-item" data-index="2">
+                    <img src="photos/photo3.jpeg" alt="Couple photo" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span class="gallery-zoom">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                        </span>
+                    </div>
+                </div>
+                <div class="gallery-item gallery-tall" data-index="3">
+                    <img src="photos/photo5.jpeg" alt="Couple photo" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span class="gallery-zoom">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                        </span>
+                    </div>
+                </div>
+                <div class="gallery-item" data-index="4">
+                    <img src="photos/photo4.jpeg" alt="Couple photo" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span class="gallery-zoom">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                        </span>
+                    </div>
+                </div>
+                <div class="gallery-item gallery-wide" data-index="5">
+                    <img src="photos/photo7.jpeg" alt="Beach photo" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span class="gallery-zoom">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                        </span>
+                    </div>
+                </div>
+                <div class="gallery-item" data-index="6">
+                    <img src="photos/photo8.jpeg" alt="Beach photo" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span class="gallery-zoom">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                        </span>
+                    </div>
+                </div>
+                <div class="gallery-item" data-index="7">
+                    <img src="photos/photo9.jpeg" alt="Couple photo" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span class="gallery-zoom">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Lightbox -->
+        <div class="lightbox" id="lightbox">
+            <button class="lightbox-close" id="lightbox-close">&times;</button>
+            <button class="lightbox-nav lightbox-prev" id="lightbox-prev">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+            </button>
+            <button class="lightbox-nav lightbox-next" id="lightbox-next">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 6 15 12 9 18"/></svg>
+            </button>
+            <div class="lightbox-content">
+                <img src="" alt="Gallery photo" id="lightbox-img">
+            </div>
+        </div>
+    </section>
+
+    <!-- Event Details Section -->
+    <section id="event">
+        <div class="container">
+            <h2 class="section-title reveal-up">
+                <span class="title-script">Wedding</span>
+                <span class="title-main">Celebration</span>
+            </h2>
+            <div class="event-cards">
+                <div class="event-card reveal-up delay-1">
+                    <div class="event-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>
+                        </svg>
+                    </div>
+                    <h3>Wedding Date</h3>
+                    <p class="event-detail">Wednesday</p>
+                    <p class="event-highlight">May 6, 2026</p>
+                    <p class="event-detail">Save the Date</p>
+                </div>
+
+                <div class="event-card reveal-up delay-3">
+                    <div class="event-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
+                        </svg>
+                    </div>
+                    <h3>Venue</h3>
+                    <p class="event-detail">Hotel Grand Guardian</p>
+                    <p class="event-highlight">Ratnapura</p>
+                    <a href="https://maps.app.goo.gl/ze2jSNNUcByU6Rts6" target="_blank" rel="noopener" class="event-map-link">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        View on Google Maps
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section id="location">
+        <div class="container">
+            <h2 class="section-title reveal-up">
+                <span class="title-script">Wedding</span>
+                <span class="title-main">Location</span>
+            </h2>
+            <p class="section-subtitle reveal-up delay-1">Find your way to our celebration</p>
+            <div class="location-wrapper reveal-up delay-2">
+                <div class="location-info">
+                    <div class="location-icon-big">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
+                        </svg>
+                    </div>
+                    <h3>Hotel Grand Guardian</h3>
+                    <p>Ratnapura — Join us at this beautiful venue to celebrate our special day</p>
+                    <a href="https://maps.app.goo.gl/ze2jSNNUcByU6Rts6" target="_blank" rel="noopener" class="location-btn" id="locationBtn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
+                        </svg>
+                        Open in Google Maps
+                    </a>
+                    <div class="location-features">
+                        <div class="loc-feature">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                            <span>May 6, 2026</span>
+                        </div>
+                        <div class="loc-feature">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                            <span>Auspicious Time</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="location-map-container">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.123456789!2d79.97!3d6.93!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwNTUnNDguMCJOIDc5wrA1OCcxMi4wIkU!5e0!3m2!1sen!2slk!4v1234567890" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0; border-radius: 16px;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                    <a href="https://maps.app.goo.gl/ze2jSNNUcByU6Rts6" target="_blank" rel="noopener" class="map-overlay-btn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                        Open Directions
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RSVP / Wishes Section -->
+    <section id="wishes">
+        <div class="container">
+            <h2 class="section-title reveal-up">
+                <span class="title-script">Send Your</span>
+                <span class="title-main">Wishes</span>
+            </h2>
+            <p class="section-subtitle reveal-up delay-1">We would love to hear your blessings</p>
+            <div class="wishes-heart reveal-up delay-2">
+                <div class="big-heart-container">
+                    <svg viewBox="0 0 100 100" class="big-heart">
+                        <path d="M50,88 L8,50 C-4,36 -4,16 8,6 C20,-4 36,0 50,18 C64,0 80,-4 92,6 C104,16 104,36 92,50 Z" fill="currentColor"/>
+                    </svg>
+                    <p class="wishes-text">Thank you for being part of our love story. Your presence will make our day truly special!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="footer-content">
+            <div class="footer-names">
+                <span class="footer-script">Gimhana</span>
+                <span class="footer-amp">&</span>
+                <span class="footer-script">Harshi</span>
+            </div>
+            <p class="footer-date">May 6, 2026</p>
+            <div class="footer-hearts">
+                ♥ ♥ ♥
+            </div>
+            <p class="footer-copy">Made with love</p>
+        </div>
+    </footer>
+
+    <!-- Music Toggle (optional background music placeholder) -->
+    <button class="music-toggle" id="musicToggle" title="Toggle Music">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" id="musicIcon">
+            <path d="M9 18V5l12-2v13"/>
+            <circle cx="6" cy="18" r="3"/>
+            <circle cx="18" cy="16" r="3"/>
+        </svg>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
